@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dropdown{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    list-style-type: none;
+}
+a{
+    display: block;
+    width: 200px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+a:hover{
+    background-color: skyblue;
+}
+.product{
+    list-style-type: none;
+    display: none;
+}
+.product i{
+    transform: rotate(-90deg);
+}
+.dropdown li:nth-child(2):hover .product{
+    display: block;
+}
+.book{
+    list-style-type: none;
+    display: none;
+    transform: translateX(200px) translateY(-50px);
+    position: absolute;
+}
+.product li:nth-child(3):hover .book{
+    display: block;
+}

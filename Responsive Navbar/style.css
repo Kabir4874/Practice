@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%
+}
+nav{
+    height: 8rem;
+    background: #2c3e50;
+}
+nav ul{
+    float: right;
+    margin-right: 2.5rem;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 8rem;
+    margin: 0 1.5rem;
+}
+nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: .5rem 0;
+}
+nav ul li a::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: .3rem;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn,
+label #cancel{
+    color: white;
+    font-size: 3rem;
+    float: right;
+    line-height: 8rem;
+    margin-right: 4rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width:860px) {
+
+    label #btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #34495e;
+        top: 8rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 5rem 0;
+        line-height: 3rem;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 2rem;
+    }
+    
+}

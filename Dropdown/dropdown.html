@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <script src="https://kit.fontawesome.com/63239a6255.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #dedede;
+            background-image: -webkit-linear-gradient(0deg, #f61daf 0%, #691cff 100%);
+        }
+        header{
+            margin: 0 auto;
+        }
+        nav{
+            height: 60px;
+            background: #2c3e50;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .logo{
+            padding: 5px 0 0 80px;
+            width: 150px;
+            height: auto;
+            display: inline;
+            font-size: 50px;
+        }
+        nav ul{
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 30px;
+        }
+        nav ul li{
+            background: #2c3e50;
+            position: relative;
+            list-style: none;
+            display: inline-block;
+        }
+        nav ul li a{
+            color: white;
+            display: block;
+            padding: 0 15px;
+            text-decoration: none;
+            line-height: 60px;
+            font-size: 20px;
+        }
+        nav ul li a:hover{
+            background: #243342;
+        }
+        nav ul ul{
+            position: absolute;
+            top: 60px;
+            display: none;
+        }
+        nav ul  li:hover > ul{
+            display: block;
+        }
+        nav ul ul li{
+            width: 150px;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+        nav ul ul ul li{
+            position: relative;
+            top: -60px;
+            left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h3 class="logo">Kabir</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tutorials <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">JQuery</a></li>
+                </ul>
+                </li>
+               <li><a href="#">Web Design <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            <ul>
+                <li><a href="#">Front End</a></li>
+                <li><a href="#">Back End</a></li>
+                <li><a href="#" >Others <i class="fa-sharp fa-solid fa-caret-down" style="transform: rotate(-90deg);"></i></a>
+                <ul>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

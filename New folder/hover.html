@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+a {
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  bottom: -2px;
+  transition: all 0.3s ease;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+a:hover::before {
+  width: 100%;
+  transform: scaleX(1);
+}
+
+    </style>
+</head>
+<body>
+    <a href="#">Hover me</a>
+
+</body>
+</html>

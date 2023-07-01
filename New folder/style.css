@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.row{
+    padding: 10px 15%;
+    background: #222222;
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    width: 600px;
+    height: 230px;
+    background-color: #333333;
+    border-radius: 10px;
+}
